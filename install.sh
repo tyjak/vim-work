@@ -1,3 +1,3 @@
 #/bin/sh
-
-ln -s `dirname $0` ~/.vim/work
+cd `dirname $0`
+ln -s $PWD ~/.vim/work

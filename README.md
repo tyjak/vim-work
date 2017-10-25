@@ -2,7 +2,7 @@
 my vim env dedicated to development mainly in php
 
     sh install.sh   # create a link with name $HOME/.vim/work that point to this 
-                      directory
+                    # directory
 
     vimrc           # vim config file
 
