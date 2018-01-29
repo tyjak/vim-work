@@ -1,29 +1,41 @@
-" install tierce 
+" install tierce
 so ~/.vim/work/bootstrap.vim
+
+"FIXME le recheragement ne fonctionne pas
+"augroup VIMRC
+"    autocmd!
+"    autocmd! BufWritePost ~/.vim/work/vimrc source %
+"augroup END
 
 setlocal makeprg=php\ -l\ %
 setlocal errorformat=%m\ in\ %f\ on\ line\ %l,%-GErrors\ parsing\ %f,%-G
 nnoremap <buffer> <silent> <f5> :update<bar>sil! make<bar>cwindow<cr>
 
-augroup TEST
-     autocmd!
-     autocmd BufReadPost ~/WORK/pe/david/* silent! cd ~/WORK/pe/david
-augroup END
+"augroup TEST
+"     autocmd!
+"     autocmd BufEnter ~/WORK/pe/labonneformation/* silent! cd ~/WORK/pe/labonneformation
+"augroup END
 
 "Various shortcut"{{{1
-imap <C-p> :set paste<CR>:exe PhpDoc()<CR>:set nopaste<CR>i
-imap ,deb if(function_exists('debug')) debug();
+inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
+nnoremap <C-P> :call PhpDocSingle()<CR>
+vnoremap <C-P> :call PhpDocRange()<CR>
+imap ,deb if(ENV_DEV) error_log(print_r(,true));<ESC>F,i
+vmap ,deb yoif(ENV_DEV) error_log(print_r(<C-r>",true));<ESC>
 nnoremap <CR> <C-]>
+nmap ,<space> :TagbarToggle<CR>
 
 "Various setup"{{{1
 au FileType php set omnifunc=phpcomplete#CompletePHP
 let g:php_manual_online_search_shortcut = 'gK'
 let g:phpqa_codesniffer_autorun=0
+let g:tagbar_autofocus=1
+let g:tagbar_autoclose=1
 
 "Startify setup"{{{1
 let g:startify_change_to_vcs_root = 1
 let g:startify_change_to_dir = 1
-let g:startify_bookmarks += [{'w':'~/WORK/divers_share/pe/labonneformation'}]
+let g:startify_bookmarks += [{'w':'~/WORK/pe/labonneformation'}]
 let g:startify_bookmarks += [{'t':'~/WORK/'}]
 let g:startify_bookmarks += [{'c':'~/.vim/work/vimrc'}]
 let g:startify_bookmarks += [{'p':'~/.vim/work/plugin.vim'}]
