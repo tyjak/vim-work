@@ -1,11 +1,11 @@
+echom "work settings loaded"
 " install tierce
 so ~/.vim/work/bootstrap.vim
 
-"FIXME le recheragement ne fonctionne pas
-"augroup VIMRC
-"    autocmd!
-"    autocmd! BufWritePost ~/.vim/work/vimrc source %
-"augroup END
+augroup vimrcwork
+    autocmd!
+    autocmd BufWritePost ~/.vim/work/vimrc source %
+augroup end
 
 setlocal makeprg=php\ -l\ %
 setlocal errorformat=%m\ in\ %f\ on\ line\ %l,%-GErrors\ parsing\ %f,%-G
@@ -21,7 +21,7 @@ inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
 nnoremap <C-P> :call PhpDocSingle()<CR>
 vnoremap <C-P> :call PhpDocRange()<CR>
 imap ,deb if(ENV_DEV) error_log(print_r(,true));<ESC>F,i
-vmap ,deb yoif(ENV_DEV) error_log(print_r(<C-r>",true));<ESC>
+vmap ,deb yoif(ENV_DEV) error_log(print_r(array('varname'=>'<C-r>"','value'=><C-r>"),true));<ESC>
 nnoremap <CR> <C-]>
 nmap ,<space> :TagbarToggle<CR>
 
@@ -31,6 +31,11 @@ let g:php_manual_online_search_shortcut = 'gK'
 let g:phpqa_codesniffer_autorun=0
 let g:tagbar_autofocus=1
 let g:tagbar_autoclose=1
+let g:UltiSnipsSnippetsDir="~/.vim/work/UltiSnips"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/work/UltiSnips']
+let g:UltiSnipsEnableSnipMate=0
+let g:UltiSnipsJumpForwardTrigger="<c-down>"
+let g:UltiSnipsJumpBackwardTrigger="<c-down>"
 
 "Startify setup"{{{1
 let g:startify_change_to_vcs_root = 1
