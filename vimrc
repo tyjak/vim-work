@@ -1,27 +1,26 @@
-echom "work settings loaded"
 " install tierce
 so ~/.vim/work/bootstrap.vim
 
 augroup vimrcwork
     autocmd!
-    autocmd BufWritePost ~/.vim/work/vimrc source %
+    autocmd BufWritePost ~/.vim/work/vimrc source ~/.vim/work/vimrc | echom "reloadwork settings"
 augroup end
 
 setlocal makeprg=php\ -l\ %
 setlocal errorformat=%m\ in\ %f\ on\ line\ %l,%-GErrors\ parsing\ %f,%-G
 nnoremap <buffer> <silent> <f5> :update<bar>sil! make<bar>cwindow<cr>
 
-"augroup TEST
-"     autocmd!
-"     autocmd BufEnter ~/WORK/pe/labonneformation/* silent! cd ~/WORK/pe/labonneformation
-"augroup END
+augroup TEST
+     autocmd!
+     autocmd BufEnter ~/WORK/pe/labonneformation/* silent! cd ~/WORK/pe/labonneformation
+augroup END
 
 "Various shortcut"{{{1
 inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
 nnoremap <C-P> :call PhpDocSingle()<CR>
 vnoremap <C-P> :call PhpDocRange()<CR>
-imap ,deb if(ENV_DEV) error_log(print_r(,true));<ESC>F,i
-vmap ,deb yoif(ENV_DEV) error_log(print_r(array('varname'=>'<C-r>"','value'=><C-r>"),true));<ESC>
+inoremap ,deb if(ENV_DEV) error_log(print_r(,true));<ESC>F,i
+vnoremap ,deb yoif(ENV_DEV) error_log(print_r(array('varname'=>'<C-r>"','value'=><C-r>"),true));<ESC>
 nnoremap <CR> <C-]>
 nmap ,<space> :TagbarToggle<CR>
 
@@ -51,7 +50,7 @@ let g:tagbar_phpctags_bin = '~/src/vim-work/phpctags'
 let g:gutentags_cache_dir = '~/.vim/work/gutentags'
 
 let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.js', '*.json', '*.xml',
-                            \ '*.phar', '*.ini', '*.rst', '*.md',
+                            \ '*.phar', '*.ini', '*.rst', '*.md', '*.log',
                             \ '*vendor/*/test*', '*vendor/*/Test*',
                             \ '*vendor/*/fixture*', '*vendor/*/Fixture*',
                             \ '*var/cache*', '*var/log*']
