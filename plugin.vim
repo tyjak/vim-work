@@ -1,4 +1,10 @@
 Plug 'editorconfig/editorconfig-vim'
+Plug 'davidhalter/jedi-vim', { 'for' : 'python' }
+"Plug 'vim-scripts/quickfixsigns'
+Plug 'vim-scripts/dbext.vim'
+Plug 'SirVer/ultisnips'
+"Plug 'chase/vim-ansible-yaml', { 'for' : 'ansible' }
+Plug 'pearofducks/ansible-vim', { 'for' : 'ansible' }
 Plug 'pangloss/vim-javascript', { 'for' : 'javascript' }
 Plug 'alvan/vim-php-manual', { 'for' : 'php' }
 Plug 'Rican7/php-doc-modded', { 'for' : 'php' }
