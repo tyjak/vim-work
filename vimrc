@@ -12,6 +12,7 @@ augroup TEST
 augroup END
 
 autocmd FileType php source ~/.vim/work/php.vim
+autocmd FileType python source ~/.vim/work/python.vim
 
 nnoremap <CR> <C-]>
 nmap ,<space> :TagbarToggle<CR>
