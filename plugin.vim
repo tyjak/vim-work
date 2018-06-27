@@ -19,3 +19,4 @@ Plug '2072/PHP-Indenting-for-VIm', { 'for' : 'php' }
 Plug 'shawncplus/phpcomplete.vim', { 'for' : 'php' }
 Plug 'w0rp/ale', { 'for' : 'php' }
 Plug 'joonty/vim-phpunitqf', { 'for' : 'php' }
+Plug 'misterbuckley/vim-definitive', { 'for' : 'python' }

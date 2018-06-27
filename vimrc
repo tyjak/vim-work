@@ -14,11 +14,6 @@ augroup END
 autocmd FileType php source ~/.vim/work/php.vim
 autocmd FileType python source ~/.vim/work/python.vim
 
-nnoremap <CR> <C-]>
-nmap ,<space> :TagbarToggle<CR>
-
-let g:tagbar_autofocus=1
-let g:tagbar_autoclose=1
 let g:UltiSnipsSnippetsDir="~/.vim/work/UltiSnips"
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/work/UltiSnips']
 let g:UltiSnipsEnableSnipMate=0
