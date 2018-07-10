@@ -30,4 +30,8 @@ let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.js', '*.json', '*.xml',
 let g:ale_linters = {
             \   'php': ['php'],
             \}
+
+let g:DirDiffExcludes = ".git,cache,tmp,config.php"
+let g:DirDiffIgnore = "Id:,Revision:,Date:"
+let g:DirDiffAddArgs = "-w"
 " vim: filetype=vim

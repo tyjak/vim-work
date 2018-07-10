@@ -17,6 +17,6 @@ Plug 'ludovicchabant/vim-gutentags', { 'for' : 'php' }
 Plug 'joonty/vdebug', { 'for' : 'php' }
 Plug '2072/PHP-Indenting-for-VIm', { 'for' : 'php' }
 Plug 'shawncplus/phpcomplete.vim', { 'for' : 'php' }
-Plug 'w0rp/ale', { 'for' : 'php' }
+Plug 'w0rp/ale', { 'for' : [ 'php', 'python' ] }
 Plug 'joonty/vim-phpunitqf', { 'for' : 'php' }
 Plug 'misterbuckley/vim-definitive', { 'for' : 'python' }

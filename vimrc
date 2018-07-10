@@ -8,7 +8,7 @@ augroup end
 
 augroup TEST
      autocmd!
-     autocmd BufEnter ~/WORK/pe/labonneformation/* silent! cd ~/WORK/pe/labonneformation
+     autocmd BufEnter ~/WORK/pe/labonneformation/* silent! cd ~/WORK/pe/labonneformation | echom "change to work's dir"
 augroup END
 
 autocmd FileType php source ~/.vim/work/php.vim
