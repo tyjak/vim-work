@@ -4,8 +4,8 @@ nnoremap <buffer> <silent> <f5> :update<bar>sil! make<bar>cwindow<cr>
 
 "Various shortcut"{{{1
 " edit and reload conf
-map ,v :tabe $VIMWORKDIR/python.vim<CR>
-map ,V :source $VIMWORKDIR/python.vim<CR>
+map ,v :tabe $VIMWORKDIR/php.vim<CR>
+map ,V :source $VIMWORKDIR/php.vim<CR>
 inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
 nnoremap <C-P> :call PhpDocSingle()<CR>
 vnoremap <C-P> :call PhpDocRange()<CR>
@@ -14,7 +14,13 @@ vnoremap ,deb yoif(ENV_DEV) error_log(print_r(array('varname'=>'<C-r>"','value'=
 
 "Various setup"{{{1
 au FileType php set omnifunc=phpcomplete#CompletePHP
+
+"Workaround for fix mappinf in php-manual
+nnoremap <buffer> <c-h> :tabprevious<CR>
 let g:php_manual_online_search_shortcut = 'gK' "TO FIX
+vnoremap <silent> <buffer> '.g:php_manual_online_search_shortcut.' y:call phpmanual#online#open(@@)<CR>'
+nnoremap <silent> <buffer> '.g:php_manual_online_search_shortcut.' :call phpmanual#online#open()<CR>'
+
 let g:phpqa_codesniffer_autorun=0
 
 "Tags configuration"{{{
@@ -34,7 +40,4 @@ let g:ale_linters = {
             \   'php': ['php'],
             \}
 
-let g:DirDiffExcludes = ".git,cache,tmp,config.php"
-let g:DirDiffIgnore = "Id:,Revision:,Date:"
-let g:DirDiffAddArgs = "-w"
 " vim: filetype=vim
