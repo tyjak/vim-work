@@ -2,3 +2,5 @@ phpctags
 __vim/*
 gutentags/*
 tagbardebug.log
+UltiSnips/
+snippets/

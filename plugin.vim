@@ -21,3 +21,4 @@ Plug 'w0rp/ale', { 'for' : [ 'php', 'python' ] }
 Plug 'joonty/vim-phpunitqf', { 'for' : 'php' }
 Plug 'misterbuckley/vim-definitive', { 'for' : 'python' }
 Plug 'plytophogy/vim-virtualenv', { 'for' : 'python' }
+Plug 'ambv/black', { 'for' : 'python' }

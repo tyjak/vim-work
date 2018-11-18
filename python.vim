@@ -1,6 +1,7 @@
 "python vimrc file 
 
 set foldmethod=indent
+set colorcolumn=88
 
 " mappings
 
@@ -10,6 +11,11 @@ set foldmethod=indent
 " edit and reload conf
 map ,v :tabe $VIMWORKDIR/python.vim<CR>
 map ,V :source $VIMWORKDIR/python.vim<CR>
+
+" debug
+inoremap ,deb import ipdb; ipdb.set_trace()
+
+let g:virtualenv_stl_format = '[%n]'
 
 " plugins settings
 let g:airline#extensions#virtualenv#enabled = 1
@@ -23,5 +29,4 @@ let b:ale_fixers = ['autopep8', 'yapf']
 " Disable warnings about trailing whitespace for Python files.
 let b:ale_warn_about_trailing_whitespace = 0
 let b:ale_python_pylint_options = '-E'
-"" Check Python files with flake8 and pylint.
 "let g:ale_completion_enabled = 1
