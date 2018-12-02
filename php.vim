@@ -1,6 +1,10 @@
 setlocal makeprg=php\ -l\ %
 setlocal errorformat=%m\ in\ %f\ on\ line\ %l,%-GErrors\ parsing\ %f,%-G
 nnoremap <buffer> <silent> <f5> :update<bar>sil! make<bar>cwindow<cr>
+let g:solarized_visibility = "normal"
+colorscheme solarized8_high
+
+
 
 "Various shortcut"{{{1
 " edit and reload conf

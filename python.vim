@@ -1,7 +1,7 @@
-"python vimrc file 
+"python vimrc file
 
 set foldmethod=indent
-set colorcolumn=88
+set textwidth=88
 
 " mappings
 
