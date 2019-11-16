@@ -1,3 +1,4 @@
+setlocal tabstop=4
 setlocal makeprg=php\ -l\ %
 setlocal errorformat=%m\ in\ %f\ on\ line\ %l,%-GErrors\ parsing\ %f,%-G
 nnoremap <buffer> <silent> <f5> :update<bar>sil! make<bar>cwindow<cr>
@@ -30,6 +31,8 @@ let g:phpqa_codesniffer_autorun=0
 "Tags configuration"{{{
 nnoremap <CR> <C-]>
 nmap ,<space> :TagbarToggle<CR>
+
+nnoremap ,t :terminal ++close php -a<CR>
 
 let g:tagbar_autofocus=1
 let g:tagbar_autoclose=1

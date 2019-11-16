@@ -1,24 +1,34 @@
 Plug 'editorconfig/editorconfig-vim'
-Plug 'davidhalter/jedi-vim', { 'for' : 'python' }
+
+" Python
+Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
+Plug 'heavenshell/vim-pydocstring', { 'for': 'python' }
+Plug 'misterbuckley/vim-definitive', { 'for': 'python' }
+Plug 'plytophogy/vim-virtualenv', { 'for': 'python' }
+Plug 'ambv/black', { 'for': 'python' }
+Plug 'alfredodeza/pytest.vim', { 'for': 'python' }
+
+" PHP
+Plug 'majutsushi/tagbar', { 'for': 'php' }
+Plug 'alvan/vim-php-manual', { 'for': 'php' }
+Plug 'Rican7/php-doc-modded', { 'for': 'php' }
+Plug 'vim-php/tagbar-phpctags.vim', { 'for': 'php' }
+Plug 'adoy/vim-php-refactoring-toolbox', { 'for': 'php' }
+"Plug 'joonty/vim-phpqa', { 'for': 'php' }
+Plug 'StanAngeloff/php.vim', { 'for': 'php' }
+Plug 'joonty/vdebug', { 'for': 'php' }
+Plug '2072/PHP-Indenting-for-VIm', { 'for': 'php' }
+Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
+Plug 'joonty/vim-phpunitqf', { 'for': 'php' }
+
+"Other
+Plug 'ludovicchabant/vim-gutentags'
 "Plug 'vim-scripts/quickfixsigns'
 Plug 'vim-scripts/dbext.vim'
 "Plug 'SirVer/ultisnips'
-"Plug 'chase/vim-ansible-yaml', { 'for' : 'ansible' }
-Plug 'pearofducks/ansible-vim', { 'for' : 'ansible' }
-Plug 'pangloss/vim-javascript', { 'for' : 'javascript' }
-Plug 'alvan/vim-php-manual', { 'for' : 'php' }
-Plug 'Rican7/php-doc-modded', { 'for' : 'php' }
-Plug 'majutsushi/tagbar', { 'for' : 'php' }
-Plug 'vim-php/tagbar-phpctags.vim', { 'for' : 'php' }
-Plug 'adoy/vim-php-refactoring-toolbox', { 'for' : 'php' }
-"Plug 'joonty/vim-phpqa', { 'for' : 'php' }
-Plug 'StanAngeloff/php.vim', { 'for' : 'php' }
-Plug 'ludovicchabant/vim-gutentags', { 'for' : 'php' }
-Plug 'joonty/vdebug', { 'for' : 'php' }
-Plug '2072/PHP-Indenting-for-VIm', { 'for' : 'php' }
-Plug 'shawncplus/phpcomplete.vim', { 'for' : 'php' }
-Plug 'w0rp/ale', { 'for' : [ 'php', 'python' ] }
-Plug 'joonty/vim-phpunitqf', { 'for' : 'php' }
-Plug 'misterbuckley/vim-definitive', { 'for' : 'python' }
-Plug 'plytophogy/vim-virtualenv', { 'for' : 'python' }
-Plug 'ambv/black', { 'for' : 'python' }
+"Plug 'chase/vim-ansible-yaml'
+Plug 'pearofducks/ansible-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'w0rp/ale'
+Plug 'janko/vim-test'

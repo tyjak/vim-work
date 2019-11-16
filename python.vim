@@ -1,20 +1,30 @@
 "python vimrc file
 
-set foldmethod=indent
-set textwidth=88
+setlocal tabstop=4
+setlocal foldmethod=indent
+setlocal textwidth=88
+setlocal softtabstop=4
+setlocal shiftwidth=4
+setlocal smarttab
+setlocal expandtab
 
 " mappings
 
 " quick definition find
 " nnoremap <CR> :FindDefinition<CR>
+map <F1> :!trefle serve --reload &>/dev/null&<CR>
+map <F2> :!behave --stop<CR>
+nmap ,t :terminal ++close ipython<CR>
 
 " edit and reload conf
-map ,v :tabe $VIMWORKDIR/python.vim<CR>
-map ,V :source $VIMWORKDIR/python.vim<CR>
+nmap ,v :tabe $VIMWORKDIR/python.vim<CR>
+nmap ,V :source $VIMWORKDIR/python.vim<CR>
 
 " debug
 inoremap ,deb import ipdb; ipdb.set_trace()
 
+let g:pydocstring_enable_mapping=0
+nmap <silent> <C-m> <Plug>(pydocstring)
 let g:virtualenv_stl_format = '[%n]'
 
 " plugins settings
@@ -30,3 +40,4 @@ let b:ale_fixers = ['autopep8', 'yapf']
 let b:ale_warn_about_trailing_whitespace = 0
 let b:ale_python_pylint_options = '-E'
 "let g:ale_completion_enabled = 1
+

@@ -11,8 +11,15 @@ augroup TEST
      autocmd BufEnter ~/WORK/pe/labonneformation/* silent! cd ~/WORK/pe/labonneformation | echom "change to work's dir"
 augroup END
 
+"Note : no ftplugin setup in these files since ftplugin settings seems to not
+"be applied
 autocmd FileType php source ~/.vim/work/php.vim
 autocmd FileType python source ~/.vim/work/python.vim
+
+"ftplugin settings
+let g:pydocstring_enable_mapping=0
+nmap <silent> <C-m> <Plug>(pydocstring)
+
 
 "let g:UltiSnipsSnippetsDir="~/.vim/work/UltiSnips"
 "let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/work/UltiSnips']
