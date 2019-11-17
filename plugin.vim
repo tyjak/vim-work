@@ -3,11 +3,15 @@ Plug 'editorconfig/editorconfig-vim'
 " Python
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
-Plug 'heavenshell/vim-pydocstring', { 'for': 'python' }
+Plug 'heavenshell/vim-pydocstring'
 Plug 'misterbuckley/vim-definitive', { 'for': 'python' }
 Plug 'plytophogy/vim-virtualenv', { 'for': 'python' }
 Plug 'ambv/black', { 'for': 'python' }
 Plug 'alfredodeza/pytest.vim', { 'for': 'python' }
+Plug 'python-rope/ropevim', { 'for': 'python' }
+
+" Tested bit seems too old
+" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " PHP
 Plug 'majutsushi/tagbar', { 'for': 'php' }
