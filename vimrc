@@ -43,10 +43,12 @@ let g:startify_bookmarks += [{'p':'~/.vim/work/plugin.vim'}]
 let g:ale_set_signs = 1
 let g:ale_sign_column_always = 0
 let g:ale_sign_error = ''
-let g:ale_sign_info = ''
+let g:ale_sign_info = '•'
 let g:ale_sign_style_error = ''
-let g:ale_sign_style_warning = ''
-let g:ale_sign_warning = ''
+let g:ale_sign_style_warning = '‼'
+let g:ale_sign_warning = '‼'
 let g:ale_statusline_format = ['%d error(s)', '%d warning(s)', 'OK']
+
+highlight link ALEWarningSign WarningMsg
 
 " vim: filetype=vim

@@ -27,7 +27,7 @@ let g:virtualenv_stl_format = '[%n]'
 
 " plugins settings
 let g:airline#extensions#virtualenv#enabled = 1
-let ropevim_vim_completion=1
+" let ropevim_vim_completion=1
 
 " let b:ale_virtualenv_dir_names=[$HOME . '/.virtualenvs/vim']
 " Check Python files with flake8 and pylint.
